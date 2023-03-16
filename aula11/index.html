@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+    <hr>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Nome</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Média</th>
+        </tr>
+    </table>
+
+    <script>
+
+        var tabela = document.querySelector("table");
+        
+        function criarLinha(nome, n1, n2){
+            var linha = tabela.insertRow();
+            var celNome = linha.insertCell();
+            var celNota1 = linha.insertCell();
+            var celNota2 = linha.insertCell();
+            var celMedia = linha.insertCell();
+
+            celNome.innerText = nome;
+            celNota1.innerText = n1;
+            celNota2.innerText = n2;
+            celMedia.innerText = (n1 + n2) / 2 ;
+        }
+
+        //fazer uma requisição para o backend
+        fetch("http://localhost/3infoa/ivan/aula11/alunos.php")
+        .then(response => response.json())
+        .then(json => {
+            for(var aluno of json){
+                criarLinha(aluno["nome"], 
+                     aluno.nota1, aluno.nota2);
+            }
+        });
+       
+    </script>
+    
+</body>
+</html>
