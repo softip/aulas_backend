@@ -16,7 +16,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Foto</th>
-                <th scope="col">Ações</th>
+                <th scope="col" width="25%">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +30,7 @@
                       src="../uploads/<?php echo $usuario['foto']; ?>" 
                       height="30px" alt="">
               </td>
-                <td>
+                <td class="text-end">
                   <a href="excluir.php?id=<?php echo $usuario['idusuario']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
                   <a href="form.php?id=<?php echo $usuario['idusuario']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                 </td>
