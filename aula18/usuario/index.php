@@ -1,5 +1,6 @@
 <?php require_once "consultar_todos.php"; ?>
 <?php require_once "../template/cabecalho.php";  ?>
+<?php require_once "../template/menu.php";  ?>
 
   <div class="container">
         <h1>Usuários</h1>
