@@ -10,8 +10,20 @@
         
 
         <li class="nav-item">
+            <a class="nav-link" href="../site/index.php">
+               Site
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="../produto/index.php">
-               Acesso Restrito
+               Produtos
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="../usuario/index.php">
+               Usuários
             </a>
         </li>
         
