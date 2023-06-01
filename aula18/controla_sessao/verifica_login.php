@@ -28,7 +28,20 @@ if(isset($_POST['usuario']) and isset($_POST['senha'])){
    $usuario = $resultado->fetch_assoc();
    
    if($usuario){
-      echo "existe um usuario com esse login";
+     
+      if(password_verify($senha, $usuario['senha'])){
+           //inicia a sessao
+           session_start();
+           
+           //cria a variavel de sessão
+           $_SESSION['usuario'] = $usuario;
+           
+           //redireciona para produtos
+           header("Location: ../produto/index.php");
+           
+      }else{
+          echo "Senha incorreta";
+      }
    }else{
       echo "Não existe usuário com o login informado";
    }
