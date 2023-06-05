@@ -1,3 +1,4 @@
+<?php require_once "../controla_sessao/controla.php"; ?>
 <?php require_once "consultar_todos.php"; ?>
 <?php require_once "../template/cabecalho.php";  ?>
 <?php require_once "../template/menu.php";  ?>

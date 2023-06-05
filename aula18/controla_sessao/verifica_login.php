@@ -40,10 +40,10 @@ if(isset($_POST['usuario']) and isset($_POST['senha'])){
            header("Location: ../produto/index.php");
            
       }else{
-          echo "Senha incorreta";
+          $erro_login = "Senha incorreta";
       }
    }else{
-      echo "Não existe usuário com o login informado";
+      $erro_login = "Não existe usuário com o login informado";
    }
 
 }
